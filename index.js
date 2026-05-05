@@ -1,8 +1,8 @@
-// modo test 20s --> let EL_DIA_DE_MI_CUMPLE = new Date();
+// modo test 20s --> 
+// let EL_DIA_DE_MI_CUMPLE = new Date();
+// EL_DIA_DE_MI_CUMPLE.setSeconds(EL_DIA_DE_MI_CUMPLE.getSeconds() + 20);
 
 const EL_DIA_DE_MI_CUMPLE = new Date("2026-09-03");
-EL_DIA_DE_MI_CUMPLE.setSeconds(EL_DIA_DE_MI_CUMPLE.getSeconds() + 20);
-
 
 let musicaHaSonado = false;
 let usuarioHaInteractuado = false;
