@@ -19,16 +19,14 @@ let intervaloDiscoteca = null;
 function iniciarDiscoteca() {
   let i = 0;
 
+  // Intervalo de 200ms 
   intervaloDiscoteca = setInterval(() => {
     document.body.style.backgroundColor = colores[i];
     i = (i + 1) % colores.length;
   }, 200);
 }
 
-
-/**
- * calcula los segundos que que quedan hasta el dia de mi cumple
- */
+// getTime contabiliza del 1980 aprox hasta la fecha seleccionada...
 function calculaLosSegundos() {
   const timestampDelDiaDeMiCumple = EL_DIA_DE_MI_CUMPLE.getTime();
   const timestampDeHoy = new Date().getTime();
@@ -36,15 +34,17 @@ function calculaLosSegundos() {
   const milisegundosQueQuedanHastaMiCumple =
     timestampDelDiaDeMiCumple - timestampDeHoy;
 
+  // ...restando encontramos ms de hoy hasta fecha seleccionada
   return conversorSegundos(milisegundosQueQuedanHastaMiCumple);
 }
 
 
+// Pasamos los ms como parámetro para convertirlos en segundos
 function conversorSegundos(m) {
   return m / 1000;
 }
 
-
+// Pasamos los s como parametro para dividirlos en dias, horas, minutos y segundos
 function conversor(segundos) {
   let m = Math.floor(segundos / 60);
   const s = segundos % 60;
@@ -67,8 +67,8 @@ function conversor(segundos) {
 }
 
 
-// activar el botón de audio 
-const boton = document.getElementById("activarSonido");
+// activar el botón de audio a partir de la clase (con Id es getElementById)
+const boton = document.querySelector(".activarSonido");
 
 boton.addEventListener("click", () => {
   usuarioHaInteractuado = true;
@@ -90,6 +90,8 @@ function handleTimeout() {
   const valor = conversor(segundosReales);
 
   
+
+  // Hacer que suene la musica cuando queden pocos segundos
   if (s <= 11 && !musicaHaSonado && usuarioHaInteractuado) {
     musicaHaSonado = true;
 
@@ -99,6 +101,7 @@ function handleTimeout() {
   }
 
 
+  // Activar confeti y discoteca cuando se acabe
   if (s <= 1) {
     confetti({ position: { x: 0, y: 0 }, count: 100 });
     confetti({ position: { x: window.innerWidth, y: 0 }, count: 100 });

@@ -6,6 +6,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reset.css">
 
     <script src="https://cdn.jsdelivr.net/npm/@hiseb/confetti@2.1.0/dist/confetti.min.js"></script>
     <script src="index.js" defer></script>
@@ -13,8 +14,7 @@
 
   <body>
     <header>
-      <!-- CAMBIO: botón -->
-      <button id="activarSonido">🔊 Activar sonido</button>
+      <button class ="activarSonido">🔊 Activar sonido</button>
 
       <h1>¡Lo que falta para mi cumpleaños!</h1>
     </header>
@@ -38,12 +38,10 @@
       </div>
     </main>
 
-    <!-- CAMBIO: footer -->
     <footer>
       <p>Creado por Jordi Carrasco</p>
     </footer>
 
-    <!-- CAMBIO: audio -->
     <video id="musica" src="./coscu.mp4" style="display: none"></video>
   </body>
 </html>
