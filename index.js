@@ -1,9 +1,6 @@
+// modo test 20s --> let EL_DIA_DE_MI_CUMPLE = new Date();
 
-
-// const EL_DIA_DE_MI_CUMPLE = new Date("2026-11-30");
-
-// modo test 20s
-let EL_DIA_DE_MI_CUMPLE = new Date();
+const EL_DIA_DE_MI_CUMPLE = new Date("2026-09-03");
 EL_DIA_DE_MI_CUMPLE.setSeconds(EL_DIA_DE_MI_CUMPLE.getSeconds() + 20);
 
 
