@@ -1,0 +1,106 @@
+/* =========================
+   BODY GRID
+   ========================= */
+
+body {
+  font-family: monospace;
+
+  display: grid;
+  grid-template-rows: 80px 1fr 60px;
+
+  min-height: 100vh;
+  margin: 0;
+
+  text-align: center;
+
+  background-image: url("./fondo.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* =========================
+   HEADER (FLEX)
+   ========================= */
+
+header {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative; /* para posicionar el botón */
+}
+
+/* BOTÓN IZQUIERDA */
+#activarSonido {  
+  position: absolute;
+  left: 10px;
+
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* MIRAR Q COÑO PONGO PARA Q EL BOTON ESTE BIEN EN EL TRABAJO DE LA POKEDEX!!!!!!!!
+
+/* TÍTULO */
+header h1 {
+  margin: 0;
+}
+
+/* =========================
+   MAIN
+   ========================= */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  gap: 1rem;
+
+  align-content: center;
+  justify-items: center;
+}
+
+main h2 {
+  font-size: 2.5rem;
+}
+
+main h3 {
+  font-size: 1rem;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (min-width: 600px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+
+  display: grid;
+  place-items: center;
+}
+
+
+
+
